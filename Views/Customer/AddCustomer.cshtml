@@ -1,0 +1,47 @@
+﻿@model Customer
+<h2 class="text-primary" align="left">Customer</h2>
+<form method="Post">
+   <div class="form-group">
+       <div asp-validation-summary="All" class="text-danger "/>
+   </div>
+
+   <div class="form-group">
+       <label asp-for="Name">Name</label>
+       <input asp-for="Name" class="form-control"/>
+       <span asp-validation-for="Name" class="text-danger"></span>
+   </div>
+
+    <div class="form-group">
+       <label asp-for="Address">Address</label>
+       <input asp-for="Address" class="form-control"/>
+       <span asp-validation-for="Address" class="text-danger"></span>
+   </div>
+
+    <div class="form-group">
+       <label asp-for="Number">Number</label>
+       <input asp-for="Number" class="form-control"/>
+       <span asp-validation-for="Number" class="text-danger"></span>
+   </div>
+
+    <div class="form-group">
+       <label asp-for="Email">Email</label>
+       <input asp-for="Email" class="form-control"/>
+       <span asp-validation-for="Email" class="text-danger"></span>
+   </div>
+   <br />
+   <br />
+   <div class="text-primary">
+       <button type="submit"class="btn btn-sm btn-primary">AddCustomer</button>
+   </div>
+</form>
+  <br />
+  <br />
+<form asp-action="Index"asp-controller="Customer" >
+    <div class="text-lg-start panel-body">
+        <button type="submit" class="btn btn-sm btn-primary">BackToList</button>
+    </div>
+</form>
+@section scripts{
+    @{<partial name="_ValidationScriptsPartial"/>}
+    
+}

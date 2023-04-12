@@ -1,0 +1,48 @@
+﻿@*@model List<practiespp.Models.Customer>*@
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="container p-2">
+    <div class="row p-1">
+        <div class="col-6">
+           <h2 class="text-primary"> Customers</h2>
+        </div>
+         <div class="col-6 text-end">
+            <a class="btn btn-primary" asp-action="AddCustomer" asp-controller="Customer"><i class="bi bi-plus-circle"></i>AddCustomer</a>
+        </div>
+    </div>
+
+</div>
+<table class="table table-bordered table-striped" style="width:100%" id="myTable">
+    <thead>
+        
+       <tr>
+        <th>
+            Name
+        </th>
+        <th>
+         Address 
+        </th>
+
+        <th>
+            Number
+        </th>
+        <th>
+            Email
+        </th>
+
+        <th>
+            Action
+        </th>
+       </tr>
+
+    </thead>
+
+   
+</table>
+ 
+@section scripts{
+    <script src="~/js/Customer.js"></script>
+}
+

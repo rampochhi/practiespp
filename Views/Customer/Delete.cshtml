@@ -1,0 +1,47 @@
+﻿
+@model Customer
+<h2 class="text-primary" align="left">Delete Customer</h2>
+<form method="Post">
+  @* <div class="form-group">
+       <div asp-validation-summary="All" class="text-danger "/>
+   </div>*@
+   <input type ="hidden" asp-for="Id" />
+   <div class="form-group">
+       <label asp-for="Name">Name</label>
+       <input asp-for="Name" class="form-control" readonly/>
+     
+   </div>
+
+    <div class="form-group">
+       <label asp-for="Address">Address</label>
+       <input asp-for="Address" class="form-control" readonly/>
+     
+   </div>
+
+    <div class="form-group">
+       <label asp-for="Number">Number</label>
+       <input asp-for="Number" class="form-control" readonly/>
+     
+   </div>
+
+   <div class="form-group">
+       <label asp-for="Email">Email</label>
+       <input asp-for="Email" class="form-control"readonly/>
+     
+   </div>
+   <br />
+   <br />
+   <div class="text-primary">
+       <button type="submit"class="btn btn-sm btn-danger" onclick="return confirm('Are you sure delete customer:@Model.Name')">Delete</button>
+   </div>
+</form>
+  <br />
+  <br />
+<form asp-action="Index"asp-controller="Customer" >
+    <div class="text-lg-start panel-body">
+        <button type="submit" class="btn btn-sm btn-primary">BackToList</button>
+    </div>
+</form>
+
+
+
